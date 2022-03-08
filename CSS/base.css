@@ -1,0 +1,24 @@
+/*公共样式*/
+/*解决高度塌陷以及外边距重叠问题*/
+.clearfix::before,
+.clearfix::after{
+    display:table;
+    content:"";
+    clear:both;
+}
+
+body{
+    /*公共字体样式*/
+    font:14px/1.5 Helvetica Neue,Helvetica,Arial,Microsoft Yahei,Hiragino Sans GB,Heiti SC,WenQuanYi Micro Hei,sans-serif;
+    color:#333;
+    /*以防窗口过小导致布局混乱*/
+    min-width: 1226px;
+}
+
+/*网页主要区域*/
+.w{
+    /*宽度*/
+    width:1226px;
+    /*居中*/
+    margin:0 auto;
+}

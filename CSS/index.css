@@ -1,0 +1,69 @@
+/*当前网页样式*/
+/*顶部导航条*/
+.navTop a{
+    /*去除链接的下划线*/
+    text-decoration: none;
+    /*设置链接文字的颜色大小*/
+    color:#b0b0b0;
+    font-size: 12px;
+    /*使链接文字居中*/
+    line-height:40px;
+}
+
+.navTop{
+    /*设置导航条的高度、背景颜色*/
+    height:40px;
+    background-color: #333;
+}
+
+.nTleft li{
+    float:left;
+}
+
+.nTmiddle li{
+    float:right;
+    /*调整与nTright的相对距离*/
+    position:relative;
+    right:32px;
+}
+
+.nTright li{
+    float:right;
+    background-color: #424242;
+}
+
+.nTright li a{
+    /*使整体按钮均可进入链接*/
+    display: block;
+    width:120px;
+    /*使文字在按钮内居中*/
+    text-align: center;
+}
+
+.nTright li a:hover{
+    background-color: #fff;
+    color:#ff6700;
+}
+
+.nTleft li a:hover,
+.nTmiddle li a:hover{
+    color:#fff;
+}
+
+.nTleft .insert{
+    margin:13px 8px 0;
+    height:13px;
+    width:1px;
+    background-color: #434343;
+    float:left;
+}
+
+.nTmiddle .insert{
+    margin:13px 8px 0;
+    height:13px;
+    width:1px;
+    background-color: #434343;
+    float:right;
+    position:relative;
+    right:32px;
+}
