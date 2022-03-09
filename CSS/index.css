@@ -40,6 +40,10 @@
     text-align: center;
 }
 
+li a{
+    display:block;
+}
+
 .nTright li a:hover{
     background-color: #fff;
     color:#ff6700;
@@ -66,4 +70,99 @@
     float:right;
     position:relative;
     right:32px;
+}
+
+/*app下拉效果*/
+/*下拉容器*/
+.dropdownapp {
+    position: relative;
+    display: inline-block;
+}
+
+/*下拉内容默认隐藏*/
+.dropdownapp-content {
+    /*display: none;*/
+    /*下拉容器阴影*/
+    box-shadow: 0 1px 5px #aaa;
+    width: 124px;
+    position: absolute;
+    top:40px;
+    /*下拉容器位置*/
+    left:50%;
+    margin-left: -55px;
+    /*若要求居中该值是工具提示框的一半*/
+
+     /*为实现过渡效果*/
+     height:0;
+     overflow:hidden;
+     transition: height 0.3s;
+
+}
+
+/*添加箭头*/
+.dropdownapp::after{
+    content: " ";
+    position: absolute;
+    /*使箭头位于顶部*/
+    bottom:0;
+    /*规定箭头水平位置居中*/
+    left:50%;
+    margin-left: -8px;
+    /*代表箭头大小，需与margin-left改成相同值才可居中*/
+    border-width: 0 8px 8px;
+    border-style: solid;
+    /*哪边有颜色则箭头朝反向*/
+    border-color: rgba(0,0,0,0) rgba(0,0,0,0) #fff;
+    display:none;
+}
+
+
+/* 悬停时显示下拉菜单 */
+.dropdownapp:hover .dropdownapp-content,
+.dropdownapp:hover::after{
+    height:148px;
+    display:block;
+}
+
+.dropdownapp-content img{
+    display:block;
+    margin:18px auto 0;
+}
+
+.descapp{
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+}
+
+/*购物车下拉效果*/
+.dropdowncart {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdowncart-content{
+    box-shadow: 0 2px 10px rgb(0 0 0 / 15%);
+    position: absolute;
+    top: 40px;
+    right:0px;
+    width: 316px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+
+}
+
+.dropdowncart-content div{
+    color:#424242;
+    font-size: 12px;
+    padding:20px 0;
+    margin:0 20px 20px;
+    line-height: 39px;
+    text-align: center;
+    height:18px;
+}
+
+.dropdowncart:hover .dropdowncart-content{
+    height:78px;
 }
