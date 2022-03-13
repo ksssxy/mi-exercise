@@ -1,8 +1,11 @@
 /*当前网页样式*/
 /*顶部导航条*/
-.navTop a{
+a{
     /*去除链接的下划线*/
     text-decoration: none;
+}
+
+.navTop a{
     /*设置链接文字的颜色大小*/
     color:#b0b0b0;
     font-size: 12px;
@@ -166,3 +169,78 @@ li a{
 .dropdowncart:hover .dropdowncart-content{
     height:78px;
 }
+
+/*头部导航条*/
+.headnav{
+    position: relative;
+    height:100px;
+}
+
+.headlogo{
+    width:56px;
+    height:56px;
+    float: left;
+    /*居中可用margin来调整*/
+    margin-top: 22px;
+    /*有时可代替position:absolute--实现换行操作*/
+    display:block;
+}
+
+.headlogo img{
+    width:100%;
+}
+
+.headlogo a:active img{
+    width:80%;
+    position:relative;
+    top:5px;
+    left:5px;
+}
+
+.headnavmiddle{
+    padding-left:70px;
+    float:left;
+}
+
+.headnavmiddle li{
+    float:left;
+}
+
+.headnavmiddle li a{
+    font-size: 16px;
+    color:#333;
+    display: block;
+    padding:38px 10px 38px 10px;
+}
+
+.headnavmiddle li a:hover{
+    color:#ff6700;
+}
+
+.pd{
+    /*absolute的哪一个父元素为relative则相对哪一个父元素*/
+    position:absolute;
+    /*若不规定则服从上一级元素*/
+    top:100px;
+    left:0;
+    height:0;
+    width:100%;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+
+/*+：后面的第一个兄弟，~：后面的某个兄弟*/
+.headnavmiddle .pddetails:hover ~ div.pd,
+/*还需使鼠标移动到pd上时pd保持滑出*/
+.pd:hover{
+    height:229px;
+    /*使边框效果在鼠标移动至其上时打开*/
+    border-top:1px solid #e0e0e0;
+    box-shadow: 0 3px 4px rgb(0 0 0 / 18%);
+}
+
+.whole{
+    visibility: hidden;
+}
+
+
