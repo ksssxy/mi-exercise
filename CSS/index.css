@@ -153,6 +153,9 @@ li a{
     height: 0;
     overflow: hidden;
     transition: height 0.3s;
+    /*以防被搜索栏挡住*/
+    z-index: 999;
+    background-color: white;
 
 }
 
@@ -243,4 +246,55 @@ li a{
     visibility: hidden;
 }
 
+/*搜索栏*/
+.navsearch{
+    width:296px;
+    height:48px;
+    float:left;
+    margin-top: 25px;
+    margin-left: 90px;
+    background-color: white;
+}
+
+.searchInfo{
+    /*防止button换行*/
+    box-sizing: border-box;
+
+    float:left;
+    width:244px;
+    height: 48px;
+    border:none;
+    padding:0 10px;
+    border:1px solid rgb(224,224,224);
+    /*去除轮廓线*/
+    outline:none;
+}
+
+.searchButton{
+    float:left;
+    height:48px;
+    width:52px;
+    border:none;
+    padding:0;
+    background-color: white;
+    /*图标当成字体*/
+    font-size: 18px;
+    border:1px solid rgb(224,224,224);
+    /*去除重叠边框*/
+    border-left: none;
+    cursor:pointer;
+    color:rgb(118,118,118);
+}
+
+.searchButton:hover{
+    color: white;
+    background-color: #ff6700;
+    border-color: #ff6700;
+}
+
+/*点击时边框全部变色*/
+.searchInfo:focus,
+.searchInfo:focus + .searchButton{
+    border-color: #ff6700;
+}
 
